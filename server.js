@@ -1,7 +1,8 @@
 const express = require("express");
 const axios = require("axios");
 const cors = require("cors");
-require("dotenv").config();
+require('dotenv').config({ quiet: true })
+
 
 const geminiRoutes = require("./gemini");
 
@@ -53,7 +54,8 @@ app.get("/news", async (req, res) => {
 });
 
 const PORT = 5000;
+module.exports = app;
 // const HOST = "192.168.1.4";
-app.listen(PORT, () =>
-    console.log(`✅ Server running at http://localhost:${PORT}`)
-);
+// app.listen(PORT, () =>
+//     console.log(`✅ Server running at http://localhost:${PORT}`)
+// );
